@@ -20,7 +20,7 @@ public class ActivitiesController {
 
 	@GetMapping(value = "/ping", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> pingService(InputStream req) {
-		return new ResponseEntity<String>("{\"operation\": \"ping\", \"status\": \"SUCCESS\"}", HttpStatus.OK);
+		return new ResponseEntity<String>("{\"operation\": \"ActivitiesService ping\", \"status\": \"SUCCESS\"}", HttpStatus.OK);
 	}
 
 	@PostMapping(value = "/getActivityOffer", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
