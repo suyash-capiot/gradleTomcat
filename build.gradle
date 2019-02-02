@@ -18,8 +18,8 @@ apply plugin: 'war'
 def jenkinsBuildNumber = hasProperty('build_number')?"${build_number}":0
 
 war{
-	baseName= 'Booking-Engine'
-	version= "1.0.${jenkinsBuildNumber}"
+	baseName= 'OrchestratorEngine'
+	//version= "1.0.${jenkinsBuildNumber}"
 	exclude 'src/test/java/**'
 }
 
