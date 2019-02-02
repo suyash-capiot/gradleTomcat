@@ -15,6 +15,14 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
+def jenkinsBuildNumber = hasProperty('build_number')?"${build_number}":0
+
+war{
+	baseName= 'Booking-Engine'
+	version= "1.0.${jenkinsBuildNumber}"
+	exclude 'src/test/java/**'
+}
+
 group = 'com.orchestration'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
